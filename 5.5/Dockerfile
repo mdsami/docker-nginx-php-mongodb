@@ -1,4 +1,4 @@
-FROM mdsami/docker-phpfpm:5.5
+FROM romeoz/docker-phpfpm:5.5
 MAINTAINER Md Sami <mdsami.diu@gmail.com>
 
 ENV OS_LOCALE="en_US.UTF-8"
