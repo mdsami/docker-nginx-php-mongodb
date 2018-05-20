@@ -1,5 +1,5 @@
-FROM romeoz/docker-phpfpm:7.0
-MAINTAINER romeOz <serggalka@gmail.com>
+FROM mdsami/docker-phpfpm:7.0
+MAINTAINER Md Sami <mdsami.diu@gmail.com>
 
 ENV OS_LOCALE="en_US.UTF-8"
 RUN apt-get update && apt-get install -y locales && locale-gen ${OS_LOCALE}

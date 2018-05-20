@@ -1,5 +1,5 @@
-FROM romeoz/docker-phpfpm:5.3
-MAINTAINER romeOz <serggalka@gmail.com>
+FROM mdsami/docker-phpfpm:5.3
+MAINTAINER Md Sami <mdsami.diu@gmail.com>
 
 ENV OS_LOCALE="en_US.UTF-8"
 RUN locale-gen ${OS_LOCALE}
