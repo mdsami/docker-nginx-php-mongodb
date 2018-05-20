@@ -117,7 +117,7 @@ docker rmi -f php-5.3
 
 echo
 echo
-echo "-- Building Nginx + PHP 5.4 image"
+echo "-- Building MongoDB image"
 docker build -t mongo 
 
 echo
