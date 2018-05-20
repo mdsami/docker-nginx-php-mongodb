@@ -8,7 +8,7 @@ docker build -t php-7.2 7.2/
 echo
 echo "-- Testing server is running"
 docker run --name app -d -p 8080:80 php-7.2; sleep 5
-curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from Nginx'
+curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from nginx'
 docker exec -it app php -v | grep -c 'PHP 7.2'
 
 echo
@@ -23,7 +23,7 @@ docker build -t php-7.1 7.1/
 echo
 echo "-- Testing server is running"
 docker run --name app -d -p 8080:80 php-7.1; sleep 5
-curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from Nginx'
+curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from nginx'
 docker exec -it app php -v | grep -c 'PHP 7.1'
 
 echo
@@ -39,7 +39,7 @@ docker build -t php-7.0 7.0/
 echo
 echo "-- Testing server is running"
 docker run --name app -d -p 8080:80 php-7.0; sleep 5
-curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from Nginx'
+curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from nginx'
 docker exec -it app php -v | grep -c 'PHP 7.0'
 
 echo
@@ -56,7 +56,7 @@ docker build -t php-5.6 5.6/
 echo
 echo "-- Testing server is running"
 docker run --name app -d -p 8080:80 php-5.6; sleep 5
-curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from Nginx'
+curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from nginx'
 docker exec -it app php -v | grep -c 'PHP 5.6'
 
 echo
@@ -72,7 +72,7 @@ docker build -t php-5.5 5.5/
 echo
 echo "-- Testing server is running"
 docker run --name app -d -p 8080:80 php-5.5; sleep 5
-curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from Nginx'
+curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from nginx'
 docker exec -it app php -v | grep -c 'PHP 5.5'
 
 echo
@@ -89,7 +89,7 @@ docker build -t php-5.4 5.4/
 echo
 echo "-- Testing server is running"
 docker run --name app -d -p 8080:80 php-5.4; sleep 5
-curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from Nginx'
+curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from nginx'
 docker exec -it app php -v | grep -c 'PHP 5.4'
 
 echo
@@ -106,13 +106,19 @@ docker build -t php-5.3 5.3/
 echo
 echo "-- Testing server is running"
 docker run --name app -d -p 8080:80 php-5.3; sleep 5
-curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from Nginx'
+curl 127.0.0.1:8080 2>/dev/null | grep -c 'Hello from nginx'
 docker exec -it app php -v | grep -c 'PHP 5.3'
 
 echo
 echo "-- Clear"
 docker rm -f -v app; sleep 5
 docker rmi -f php-5.3
+
+
+echo
+echo
+echo "-- Building Nginx + PHP 5.4 image"
+docker build -t mongo 
 
 echo
 echo "-- Done"
